@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width: 100vw !important;
+    overflow-x: hidden;
+}
+#responsive_nav{
+    display: none;
+}
+#nav-btn {
+    display: none;
+}
+#resp-filters{
+    display: none;
+}
+.nav-container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.75rem;
+    margin-inline: 8vw;
+    /* border: 2px solid black; */
+}
+
+.nav-menu{
+    margin-left: auto;
+    margin-right: 3vw;
+}
+.navlist{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+.navlist > li > a{
+    color: #253D4E;
+    text-decoration: none;
+    margin-inline: 1rem ;
+}
+
+@media only screen  and (max-width: 840px) {
+    .nav-container{
+        margin: 0;
+    }
+    #nav-btn{
+        display: block;
+        margin-right: 1rem;
+    }
+    .nav-menu{
+        display: none;
+    }
+    .user-logo{
+        display: none;
+    }
+    .nav-logo{
+        margin-right: auto;
+    }
+    .food_sidebar>#sidebar{
+        display: none;
+    }
+    .top-footer > div{
+        display: none;
+    }
+    .links{
+        display: none;
+    }
+    #hero-section > .hero-sec{
+        margin-inline: 5px;
+        width: 98vw;
+    }
+    .hero-sec > #hero-para{
+        font-size: 20px;
+        width: 100%;
+    }
+
+    main > .filter_sort_food{
+        margin: 5px;
+        padding: 5px;
+    }
+
+    #food-sec > .food-card{
+        width: 30vw !important;
+    }
+    #footer-resp{
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+    #footer-resp-para{
+        width: 85vw;
+    }
+
+    .sorting-option-conatiner > .sorting-cards{
+        width: 30vw;
+        height: 20vh;
+        margin-inline: 5px;
+        border-radius: 10px;
+        
+    }
+    #resp-filters{
+        display: block;
+    }
+    #resp-filters > #resp-ratings{
+        display: flex;
+        margin-bottom: 2vw;
+        gap: 2vw;
+    }
+    #responsive_nav{
+        /* display: block; */
+        display: none;
+        position: absolute;
+        height: 422vh;
+        width: 60vw;
+        padding: 1rem;
+        background-color: white;
+        border-right: 1px dotted rgb(150, 133, 133) ;
+    }
+    .resp-nav-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-inline: 10px;
+        margin-bottom: 5vh;
+    }
+    .resp-navlist{
+        list-style: none;
+    }
+    .resp-navlist > a{
+        text-decoration: none;
+    }
+}
+
+/* hero-section */
+.hero-sec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5rem;
+    margin-inline: 8vw;
+    width: 84vw;
+    height: 45vh;
+    background: url(Resources/Rectangle\ 20.png) no-repeat 50% 50%;
+    background-size: cover;
+    border-radius: 15px;
+    /* overflow-y: auto; */
+}
+.hero-sec > h1{
+    font-size: 33px;
+    width: 25vw;
+    color: white;
+    overflow: auto;
+}
+
+/* main-section */
+
+/* top-sorting-section */
+.filter_sort_food{
+    margin-inline: 8vw;  
+    margin-top: 2rem;       
+}
+.top-sort{
+    grid-area: top-sort;
+    height: 315px;
+}
+.sidebar-filter{
+    grid-area: sidebar-filter;
+    height: 350px;
+    /* width: 315px; */
+}
+.sorting-cards{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2vw;
+    height: 12vh; width: 20vw;
+    padding: 1rem;
+    border-radius: 10px;
+    align-items: center;
+}
+.food-sec{
+    height: 750px;
+    grid-area: food-sec;
+}
+.search-bar-container{
+    display: flex;
+    margin-top: 2rem;
+    align-items: center;
+}
+.search-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f3f3f3;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 10px;
+    width: 98%;
+}
+
+.search-input > input{
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-left: 10px;
+}
+.search-bar-button{
+    background-color: #509E2F;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.sorting-option-conatiner{
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+}
+.sorting-option{
+    display: flex;
+    width: 15vw;
+    height: 12.5vh;
+    border-radius: 10px;
+    margin-right: 2vw;
+    border: none;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    color: white;
+}
+
+
+/* sidebar-filter-section */
+.food_sidebar{
+    display: flex;
+}
+
+.sidebar-filter{
+    padding: 1rem;
+    width: 300px;
+}
+
+.filters{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+
+/* food-section */
+.food-sec{
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+#food-img {
+    width: 19vw;
+    height: 30vh;
+}
+#food-img > img{
+    width: 100%;
+    height:100%;
+}
+
+/* footer-top-section */
+
+.top-footer{
+    display: grid;
+    grid-template-columns: 2fr 0.75fr 0.75fr 2fr;
+    margin-inline: 8vw;
+    margin-bottom: 3rem;
+}
+.top-footer-item{
+    margin-inline: 3rem;
+}
+.top-footer-item > div > ul{
+    list-style: none;
+}
+.top-footer-item > div > ul > li {
+    margin-bottom: 1rem;
+}
+.top-footer-item > div{
+    margin-bottom: 2rem;
+}
+
+.links{
+    margin-inline: 1rem;
+}
